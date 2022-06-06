@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+/* 进度步骤 */
+.progress-steps {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(224, 224, 224);
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color:rgb(52, 152, 219); 
+  transition: all 1s ease-in-out;
+}
+.progress-steps .step {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: rgb(138, 135, 135);
+  border: 3px solid rgb(224, 224, 224);
+  transition: all 1.5s ease-in-out;
+}
+.progress-steps .step:nth-child(3){ 
+  left: 33.3%;
+}
+.progress-steps .step:nth-child(4){
+  left: 66.6%
+}
+.progress-steps .step:nth-child(5){
+  left: 100%
+}
+.progress-steps .step-active {
+  border-color: rgb(52, 152, 219);
+}
+
+/* 控制按钮 */
+.contrl-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.contrl-btn .btn {
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: rgb(224, 224, 224);
+  border: 0;
+  padding: 8px 30px;
+  margin: 10px;
+  color: #fff;
+  background-color: rgb(52, 152, 219);
+  cursor: pointer;
+  
+}
+
+.contrl-btn .btn:disabled {
+  background-color: rgb(224, 224, 224);
+  cursor: not-allowed;
+}
+
+
