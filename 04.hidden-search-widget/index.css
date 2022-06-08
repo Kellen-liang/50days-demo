@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(123, 94, 249);
+}
+.search {
+  padding: 8px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.search input {
+  width: 200px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  transition:  all 0.3s linear;
+}
+.search input:focus {
+  outline: 0;
+}
+.search svg {
+  cursor: pointer;
+  vertical-align: top;
+}
